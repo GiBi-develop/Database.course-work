@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, user-scalable=no initial-scale=1.0, maximum-scale=1.0">
+    <title>DogExpo</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+<!-- Дополнительны клас утилита к контейнеру-->
+<div class="container pt-5" id="app">
+    <div class="row mb-3">
+        <div class="col">
+             <h1>Cars application</h1>
+        </div>
+    </div>
+        <div class="row">
+                <div class="col-md-4">
+                    <div class="form-group">
+                        <label for="search">Find your dog</label>
+                        <input type="text" class="form-control" id="search" placeholder="Name, model...">
+                    </div>
+                    <hr>
+                    <ul class="list-group">
+                        <li
+                                v-for="car of cars"
+                                class="list-group-item list-group-item-action pointer"
+                        >
+                            {{ car.name }} - {{ car.model }}
+                        </li>
+                    </ul>
+                </div>
+                <div class="col-md-8 pt-3">
+                    <div class="row">
+                        <div class="col md-5">
+                                <h2>Ford</h2>
+                                <img src="images/1.jpg" alt="" class="rounded detailed-car-image">
+                        </div>
+                        <div class="col md-7 pt-2">
+                        <h5> Car details</h5>
+
+                        <ul>
+                            <li> Veu</li>
+                            <li>TRE</li>
+                            <li>Rededed</li>
+                        </ul>
+                        <p> + 73636246263</p>
+
+                            <button class="btn btn-outline-success mr-3">show phone</button>
+                        <button class="btn btn-primary">Buy car</button>
+                    </div>
+                    </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/vue@2.5.17/dist/vue.js"></script>
+<script src="app.js"> </script>
+</body>
+</html>
